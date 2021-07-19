@@ -38,7 +38,10 @@
           <h2>Mars Hemispheres</h2>
           <ul style="list-style: none;">
             {% for hemi in mars.hemisphere_image_urls %}
-              <li>{{hemi.title}} | {{hemi.img_url}}</li>
+              <div>
+                <img src={{hemi.img_url}}>
+                <p>{{hemi.title}}</p>
+              </div>
             {% endfor %}
           </ul>
           <!-- <p>{{mars.hemisphere_image_urls}}</p> -->
