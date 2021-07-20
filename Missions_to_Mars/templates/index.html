@@ -35,14 +35,12 @@
         </table>
         <div>
           <h2>Mars Hemispheres</h2>
-          <ul style="list-style: none;">
             {% for hemi in mars.hemisphere_image_urls %}
               <div>
-                <img src={{hemi.img_url}}>
+                <img height="300"src={{hemi.img_url}}>
                 <p>{{hemi.title}}</p>
               </div>
             {% endfor %}
-          </ul>
         </div>
       </div>
     </div>
