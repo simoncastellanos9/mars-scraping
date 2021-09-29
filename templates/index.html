@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mars Data</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">SCRAPE!</a></p>
+    </div>
+
+    <div class="row" id="craiglist-listings">
+      <div class="col-md-12">
+        <h2>NASA Mars News</h2>
+        <h3>{{mars.news_title}}</h3>
+        <p>{{mars.paragraph_text}}</p>
+        <h2>JPL Mars Space Images - Featured Image</h2>
+        <p>{{mars.featured_image_url}}</p>
+        <h2>Mars Facts</h2>
+        <table>
+          {% for row in mars.table %}
+          <tr>
+            <th>{{row.Desc}}</th>
+            <td>{{row.Data}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        <div>
+          <h2>Mars Hemispheres</h2>
+            {% for hemi in mars.hemisphere_image_urls %}
+              <div>
+                <img height="300"src={{hemi.img_url}}>
+                <p>{{hemi.title}}</p>
+              </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
