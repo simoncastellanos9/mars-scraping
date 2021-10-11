@@ -31,4 +31,3 @@ SQLAlchemy==1.4.25
 typing-extensions==3.10.0.2
 urllib3==1.26.7
 webdriver-manager==3.5.0
-
